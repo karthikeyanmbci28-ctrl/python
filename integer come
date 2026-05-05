@@ -1,0 +1,9 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Read the four integers
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+
+# Calculate and print the result
+print(pow(a, b) + pow(c, d))
