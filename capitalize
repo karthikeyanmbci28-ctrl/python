@@ -1,0 +1,12 @@
+
+def solve(s):
+    # Split by spaces to keep track of multiple spaces between names
+    words = s.split(' ')
+    
+    # Capitalize only the first character of each word
+    capitalized_words = [word.capitalize() for word in words]
+    
+    # Join them back with a single space
+    return ' '.join(capitalized_words)
+
+
