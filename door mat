@@ -1,0 +1,16 @@
+# Read input and split into n and m
+n, m = map(int, input().split())
+
+# Top section
+for i in range(1, n, 2):
+    # Pattern repeats 1, 3, 5... times
+    pattern = (".|." * i)
+    print(pattern.center(m, "-"))
+
+# Middle section
+print("WELCOME".center(m, "-"))
+
+# Bottom section (reverse of the top)
+for i in range(n-2, -1, -2):
+    pattern = (".|." * i)
+    print(pattern.center(m, "-"))
