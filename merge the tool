@@ -1,0 +1,13 @@
+def merge_the_tools(string, k):
+    # Iterate through the string in steps of k
+    for i in range(0, len(string), k):
+        substring = string[i : i + k]
+        
+        # Use a temporary list to track unique characters in order
+        unique_chars = []
+        for char in substring:
+            if char not in unique_chars:
+                unique_chars.append(char)
+        
+        # Join the list into a string and print
+        print("".join(unique_chars))
