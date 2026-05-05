@@ -1,0 +1,15 @@
+import string
+
+def print_rangoli(size):
+    alphabet = string.ascii_lowercase
+    lines = []
+    
+    for i in range(size):
+        # Slice the alphabet from 'size-1' down to 'i'
+        s = "-".join(alphabet[size - 1 : i : -1] + alphabet[i : size])
+        # Center the string with '-' and append to list
+        lines.append(s.center(4 * size - 3, "-"))
+        
+    # Join the top (reversed), middle, and bottom (top mirrored)
+    print('\n'.join(lines[::-1] + lines[1:]))
+
