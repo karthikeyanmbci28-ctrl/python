@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import permutations
+
+# Read input, split into string S and integer k
+s_input, k = input().split()
+
+# Sort the string first to ensure lexicographic output
+sorted_s = sorted(s_input)
+
+# Generate permutations of size k
+result = list(permutations(sorted_s, int(k)))
+
+# Join each tuple into a string and print
+for p in result:
+    print("".join(p))
